@@ -1,0 +1,32 @@
+An array is the correct data structure because we need to store 30 rainfall readings of the same data type. Instead of creating 30 separate variables, we can store all values using one array:
+float rainfall[30];
+This makes it easier to access and process the data using a loop.
+Two-Step Logic
+
+Step 1: Calculate the average
+First, add all 30 rainfall readings and divide the total by 30.
+total = 0;
+
+for(i = 0; i < 30; i++)
+{
+    total = total + rainfall[i];
+}
+
+average = total / 30;
+
+Step 2: Find days above the average
+After calculating the average, check each day's rainfall against the average.
+for(i = 0; i < 30; i++)
+{
+    if(rainfall[i] > average)
+    {
+        printf("Day %d is above average\n", i + 1);
+    }
+}
+
+Why Two Loops?
+We normally use two loops because the average must be calculated first. Until we know the average, we cannot determine whether a particular day's rainfall is above it.
+
+Logic:
+30 readings → Calculate total → Calculate average → Compare each day with average
+Therefore, an array and two-step processing make the program simple, organized, and easy to understand.

@@ -1,0 +1,61 @@
+When the user presses Enter without typing anything, the input string is empty. In C, an empty string is still a valid string,
+ but it contains only the null character '\0'.
+
+If the pointer-based program immediately dereferences the pointer without checking its value,
+it may try to process data that is not a valid character, causing incorrect behavior or a crash.
+
+For example:
+
+char name[50];
+char *ptr = name;
+
+while (*ptr != '\0')
+{
+    printf("%c", *ptr);
+    ptr++;
+}
+
+Here, *ptr is dereferenced immediately. A safer pointer-based solution should make sure the pointer is valid before dereferencing it:
+
+if (ptr != NULL && *ptr != '\0')
+{
+    // safely use *ptr
+}
+Pointer vs Array Index
+
+Array indexing:
+
+for(i = 0; name[i] != '\0'; i++)
+{
+    printf("%c", name[i]);
+}
+
+Here we access characters using name[i].
+
+Pointer traversal:
+
+char *ptr = name;
+
+while (*ptr != '\0')
+{
+    printf("%c", *ptr);
+    ptr++;
+}
+
+Here we access the current character using *ptr and move to the next character using ptr++.
+
+Which is easier for catching the bug?
+
+Array indexing is generally easier for a beginner to debug, because name[i] clearly shows which array position is being accessed,
+ and the condition name[i] != '\0' naturally handles an empty string.
+
+With pointers, you must be more careful about checking the pointer before dereferencing it.
+
+In short:
+
+Empty input → string contains '\0'.
+Never dereference an invalid/NULL pointer.
+Array notation → name[i]
+Pointer notation → *ptr
+Pointer traversal → ptr++
+Array indexing is usually easier for beginners to debug.

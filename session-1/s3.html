@@ -1,0 +1,18 @@
+Field HTML Input Type Purpose
+Applicant Name text Accepts the applicant's name
+Email Address email Accepts an email address and checks its basic format.
+Phone Number tel Accepts a phone number.
+Preferred Domain radio Allows the applicant to select one domain from Web, Data, Mobile, or AI.
+Resume Upload file Allows the applicant to upload a resume file.
+HTML5 Validation Attributes
+The two main constraints can be enforced using required and type="email".
+
+required Ensures that the user cannot submit the form with an empty field. For radio buttons with the same name, selecting one option satisfies the requirement for that group.
+type="email" Provides built-in browser validation for the email field. It checks that the entered value follows a basic email format, such as name@example.com.
+Why These Attributes Alone Are Not Sufficient
+HTML5 validation is useful for client-side validation, but it is not enough for production-level security because:
+Users can bypass browser validation.
+HTML validation does not guarantee that an email address actually exists.
+Server-side validation is required to verify the submitted data.
+The server should also validate file type, file size, and other security requirements before accepting the resume.
+Conclusion: Use HTML5 validation for a better user experience, but always perform server-side validation before storing or processing the application.

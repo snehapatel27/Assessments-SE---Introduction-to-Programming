@@ -1,0 +1,48 @@
+Bootstrap's Grid System uses a 12-column layout to create responsive designs. We can control how many columns an element occupies at different screen sizes using Bootstrap's grid classes, without writing custom media queries.
+
+<div class="col-12 col-md-4">
+    <article>
+        <h3>News Article</h3>
+        <p>Article content goes here.</p>
+    </article>
+</div>
+
+Class Meaning What it controls
+col-12 12 columns On extra-small screens, the article takes the full row, so 1 article per row.
+col-md-4 4 columns from medium screens and above On medium, large, and extra-large screens, the article takes 4 out of 12 columns, so 3 articles per row.
+How It Works
+Mobile screen:
+col-12 → 12 columns → 1 article per row
+Desktop screen:
+col-md-4 → 4 columns each → 12 ÷ 4 = 3 articles per row
+Example with Three Articles
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-12 col-md-4">
+            <article>
+                <h3>Article 1</h3>
+                <p>News content...</p>
+            </article>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <article>
+                <h3>Article 2</h3>
+                <p>News content...</p>
+            </article>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <article>
+                <h3>Article 3</h3>
+                <p>News content...</p>
+            </article>
+        </div>
+
+    </div>
+</div>
+
+Conclusion: The combination col-12 col-md-4 makes each article full-width on mobile and one-third width on desktop,
+ creating a responsive 1-column → 3-column layout using Bootstrap's built-in grid system.
