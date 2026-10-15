@@ -37,14 +37,14 @@ int main()
     average = total / 7;
 
     // Display performance summary
-    printf("\n===== PERFORMANCE SUMMARY =====\n");
+    printf("\nPERFORMANCE SUMMARY \n");
     printf("Weekly Total: %.2f hours\n", total);
     printf("Daily Average: %.2f hours\n", average);
     printf("Highest Study Hours: Day %d (%.2f hours)\n",
            highestDay + 1, hours[highestDay]);
 
     // Display visual bars
-    printf("\n===== STUDY HOURS BAR =====\n");
+    printf("\nSTUDY HOURS BAR \n");
 
     for(i = 0; i < 7; i++)
     {

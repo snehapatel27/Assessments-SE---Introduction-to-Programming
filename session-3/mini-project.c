@@ -13,7 +13,7 @@ void weeklyReport(struct StudyLog logs[], int count)
     float total, average;
     int dots;
 
-    printf("\n========== WEEKLY REPORT ==========\n");
+    printf("\n WEEKLY REPORT \n");
 
     for(i = 0; i < count; i++)
     {
@@ -96,7 +96,7 @@ int main()
 
     do
     {
-        printf("\n\n===== STUDENT PRODUCTIVITY TRACKER =====\n");
+        printf("\n\n STUDENT PRODUCTIVITY TRACKER \n");
         printf("1. Log Today's Study Hours\n");
         printf("2. View Weekly Report\n");
         printf("3. Save & Exit\n");

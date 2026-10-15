@@ -16,7 +16,7 @@ int main()
 
     do
     {
-        printf("\n===== Personal Expense Logger =====\n");
+        printf("\nPersonal Expense Logger\n");
         printf("1. Add Expense\n");
         printf("2. View All Expenses\n");
         printf("3. Save & Exit\n");
